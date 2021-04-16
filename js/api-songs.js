@@ -6,6 +6,11 @@ const d = document,
   $artist = d.querySelector(".artist"),
   $song = d.querySelector(".song");
 
+const clearFields = () => {
+  d.querySelector(".name-value").value = "";
+  d.querySelector(".song-value").value = "";
+};
+
 $form.addEventListener("submit", async (e) => {
   e.preventDefault();
   try {
@@ -54,6 +59,7 @@ $form.addEventListener("submit", async (e) => {
     $loader.style.display = "none";
     $artist.innerHTML = $artistTemplate;
     $song.innerHTML = $songTemplate;
+    clearFields();
   } catch (error) {
     console.log(error);
     let message = error.statusText || "Ocurrió un ERROR";
