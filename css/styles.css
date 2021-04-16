@@ -23,6 +23,12 @@ h2 {
   color: #1db954;
 }
 
+h3 {
+  color: #63717f;
+  font-size: 22px;
+  font-weight: normal;
+}
+
 p,
 blockquote {
   color: #e8f0fe;
@@ -41,7 +47,7 @@ main {
   background-color: #1b1b1b;
   display: flex;
   flex-direction: column-reverse;
-  min-height: calc(100vh - 477px);
+  min-height: calc(100vh - 530px);
 }
 
 .header {
