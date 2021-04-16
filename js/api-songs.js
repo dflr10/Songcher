@@ -26,15 +26,17 @@ $form.addEventListener("submit", async (e) => {
     //console.log(artist, song);
     //console.log(artistData, songData);
 
-    if (artistData.artists === null) {
+     if (artistData.artists === null) {
       $artistTemplate = `<h2>No results found search for artist: <mark>${query}</mark></h2>`;
     } else {
       let artist = artistData.artists[0];
       $artistTemplate = `<h2>${artist.strArtist}</h2>
       <img src="${artist.strArtistThumb}" alt="${artist.strArtist}">
       <p>${artist.intBornYear}--${artist.intDieYear || "Actuallity"}</p>
-      <p><b>NATIONALITY:</b>${artist.strCountry}</p>
-      <p><b>GENDER:</b>${artist.strGenre}-- <b>STYLE:</b>${artist.strStyle}</p>
+      <p><b>NATIONALITY: </b>${artist.strCountry}</p>
+      <p><b>GENDER: </b>${artist.strGenre}-- <b>STYLE: </b>${
+        artist.strStyle
+      }</p>
       <a href="https://${artist.strWebsite}" target="_blank">Go to Web Site</a>
       <h2>BIOGRAPHY</h2>
       <p>${artist.strBiographyEN}</p>
