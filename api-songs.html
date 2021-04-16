@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/songcher.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Songcher</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Songcher 🎧</h1>
+    </header>
+    <form id="song-search">
+        <input type="text" name="artist" placeholder="Interpreter Name" required>
+        <br>
+        <input type="text" name="song" placeholder="Song Name" required>
+        <br>
+        <input type="submit">
+    </form>
+    <img class="loader" src="assets/audio-loader.svg" alt="Loading...">
+    <aside class="error"></aside>
+    <main>
+        <article class="artist"></article>
+        <article class="song"></article>
+    </main>
+    <footer class="footer container">
+        <span>Developed by Daniel Lozada 2021. This website uses the LYRICS.OVH-API & TheAudioDB-API</span>
+    </footer>
+
+    <script src="js/api-songs.js"></script>
+</body>
+
+</html>
