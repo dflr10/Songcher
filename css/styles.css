@@ -47,7 +47,7 @@ main {
   background-color: #1b1b1b;
   display: flex;
   flex-direction: column-reverse;
-  min-height: calc(100vh - 580px);
+  min-height: calc(100vh - 530px);
 }
 
 .header {
@@ -98,7 +98,7 @@ input[type="submit"] {
 }
 
 .container {
-  height: 90px;
+  height: 60px;
   background-color: #191414;
   color: #1db954;
   padding-top: 25px;
@@ -112,5 +112,31 @@ input[type="submit"] {
   main > * {
     padding: 1rem;
     flex-basis: 50%;
+  }
+}
+
+@media (min-width: 555px) and (max-width: 855px) {
+  .header,
+  body,
+  .footer,
+  h3 {
+    font-size: 14px;
+  }
+
+  main {
+    min-height: calc(100vh - 356px);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header,
+  body,
+  .footer,
+  h3 {
+    font-size: 14px;
+  }
+
+  main {
+    min-height: calc(100vh - 359px);
   }
 }
