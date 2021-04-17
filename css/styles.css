@@ -115,16 +115,20 @@ input[type="submit"] {
   }
 }
 
-@media (min-width: 555px) and (max-width: 855px) {
+@media (min-width: 551px) and (max-width: 855px) {
   .header,
   body,
   .footer,
   h3 {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   main {
-    min-height: calc(100vh - 356px);
+    min-height: calc(100vh - 375px);
+  }
+
+  .footer {
+    font-size: 12px;
   }
 }
 
@@ -137,6 +141,10 @@ input[type="submit"] {
   }
 
   main {
-    min-height: calc(100vh - 359px);
+    min-height: calc(100vh - 356px);
+  }
+
+  .footer {
+    font-size: 10px;
   }
 }
