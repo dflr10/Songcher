@@ -86,6 +86,10 @@ $form.addEventListener("submit", async (e) => {
     console.log(error);
     let message = error.statusText || "Ocurrió un ERROR";
     $error.innerHTML = `<p>Error ${error.status}: ${message}</p>`;
+    setTimeout(() => {
+      $error.innerHTML = "";
+    }, 2500);
+    clearFields();
     $loader.style.display = "none";
   }
 });
