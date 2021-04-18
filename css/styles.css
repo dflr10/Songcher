@@ -3,6 +3,8 @@ html {
   box-sizing: border-box;
   font-size: 20px;
   text-align: center;
+  scroll-behavior: smooth;
+
 }
 
 *,
