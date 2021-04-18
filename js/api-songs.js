@@ -1,4 +1,5 @@
 const d = document,
+  w = window,
   $form = d.getElementById("song-search"),
   $loader = d.querySelector(".loader"),
   $error = d.querySelector(".error"),
@@ -27,7 +28,7 @@ $form.addEventListener("submit", async (e) => {
       [artistRes, songRes] = await Promise.all([artistFetch, songFectch]),
       artistData = await artistRes.json(),
       songData = await songRes.json();
-
+    
     //console.log(artist, song);
     //console.log(artistData, songData);
 
@@ -60,6 +61,27 @@ $form.addEventListener("submit", async (e) => {
     $artist.innerHTML = $artistTemplate;
     $song.innerHTML = $songTemplate;
     clearFields();
+    
+    const screenWidth = w.screen.width;
+    //console.log(screenWidth);
+    if (screenWidth >= 856) {
+      w.scrollTo({
+        top: 480,
+        left: 0,
+      });
+    }
+    if (screenWidth >= 551 && screenWidth <= 855) {
+      w.scrollTo({
+        top: 320,
+        left: 0,
+      });
+    }
+    if (screenWidth <= 550) {
+      w.scrollTo({
+        top: 300,
+        left: 0,
+      });
+    }   
   } catch (error) {
     console.log(error);
     let message = error.statusText || "Ocurrió un ERROR";
