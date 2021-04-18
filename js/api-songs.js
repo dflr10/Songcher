@@ -84,6 +84,8 @@ $form.addEventListener("submit", async (e) => {
     }   
   } catch (error) {
     console.log(error);
+    $artist.innerHTML = "";
+    $song.innerHTML = "";
     let message = error.statusText || "Ocurrió un ERROR";
     $error.innerHTML = `<p>Error ${error.status}: ${message}</p>`;
     setTimeout(() => {
