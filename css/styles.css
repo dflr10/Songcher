@@ -4,7 +4,6 @@ html {
   font-size: 20px;
   text-align: center;
   scroll-behavior: smooth;
-
 }
 
 *,
@@ -17,6 +16,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   background-color: #1b1b1b;
 }
 
@@ -49,13 +49,12 @@ main {
   background-color: #1b1b1b;
   display: flex;
   flex-direction: column-reverse;
-  min-height: calc(100vh - 530px);
+  flex-grow: 1;
 }
 
 .header {
   width: 100%;
   display: block;
-  margin: auto;
   color: #1db954;
   background-color: #191414;
   text-align: center;
@@ -122,15 +121,14 @@ input[type="submit"] {
   body,
   .footer,
   h3 {
-    font-size: 16px;
-  }
-
-  main {
-    min-height: calc(100vh - 375px);
+    font-size: 18px;
   }
 
   .footer {
-    font-size: 12px;
+    font-size: 14px;
+  }
+  .footer span {
+    padding: 5px;
   }
 }
 
@@ -140,10 +138,6 @@ input[type="submit"] {
   .footer,
   h3 {
     font-size: 14px;
-  }
-
-  main {
-    min-height: calc(100vh - 356px);
   }
 
   .footer {
