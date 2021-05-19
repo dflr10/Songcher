@@ -23,13 +23,13 @@ body {
 h1,
 h2 {
   color: #1db954;
-  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
 }
 
 h3 {
   color: #63717f;
   font-size: 22px;
   font-weight: normal;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
 }
 
 p,
@@ -73,6 +73,9 @@ input[type="submit"] {
   background-color: #1db954;
   cursor: pointer;
   font-weight: bold;
+}
+input[type="text"] {
+  background-color: rgb(232, 240, 254);
 }
 
 input[type="text"],

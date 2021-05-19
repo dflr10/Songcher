@@ -28,11 +28,11 @@ $form.addEventListener("submit", async (e) => {
       [artistRes, songRes] = await Promise.all([artistFetch, songFectch]),
       artistData = await artistRes.json(),
       songData = await songRes.json();
-    
+
     //console.log(artist, song);
     //console.log(artistData, songData);
 
-     if (artistData.artists === null) {
+    if (artistData.artists === null) {
       $artistTemplate = `<h2>No results found search for artist: <mark>${query}</mark></h2>`;
     } else {
       let artist = artistData.artists[0];
@@ -61,7 +61,7 @@ $form.addEventListener("submit", async (e) => {
     $artist.innerHTML = $artistTemplate;
     $song.innerHTML = $songTemplate;
     clearFields();
-    
+
     const screenWidth = w.screen.width;
     //console.log(screenWidth);
     if (screenWidth >= 856) {
@@ -81,7 +81,7 @@ $form.addEventListener("submit", async (e) => {
         top: 300,
         left: 0,
       });
-    }   
+    }
   } catch (error) {
     console.log(error);
     $artist.innerHTML = "";
